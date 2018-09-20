@@ -76,6 +76,17 @@ a {
     }
 }
 
+@media (max-width: 550px){
+    .header__menu__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
 .header__menu__item:hover,
 .header__menu__item:focus,
 .header__menu__item:active {
@@ -102,6 +113,12 @@ a {
     }
 }
 
+@media (max-width: 550px){
+    .header__info {
+        font-size: 12px;
+    }
+}
+
 .header__info div {
     margin-right: 20px;
 }
@@ -112,7 +129,7 @@ a {
 }
 
 .header__info__payment img {
-    height: 35px;
+    height: 30px;
 }
 
 @media (max-width: 690px) {
@@ -182,6 +199,13 @@ main {
     font-size: 50px;
 }
 
+@media (max-width: 600px) {
+    .main__about__title {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+}
+
 .main__about__text {
     font-size: 20px;
 }
@@ -198,6 +222,13 @@ main {
     margin-bottom: 50px;
     padding-top: 57px;
     margin-top: -57px;
+}
+
+@media (max-width: 1100px) {
+    .services {
+        padding-top: 107px;
+        margin-top: -107px;
+    }
 }
 
 .services__title,
@@ -218,7 +249,7 @@ main {
 
 .services__menu img {
     margin-right: 100px;
-    height: 300px;
+    height: 250px;
 }
 
 @media (max-width: 900px) {
@@ -276,6 +307,13 @@ main {
     margin-bottom: 50px;
     padding-top: 57px;
     margin-top: -57px;
+}
+
+@media (max-width: 1050px) {
+    .reviews {
+        padding-top: 107px;
+        margin-top: -107px;
+    }
 }
 
 .reviews__cards {
@@ -358,6 +396,8 @@ footer {
 
 .footer__cover {
     display: flex;
+    justify-content: center;
+
     width: 100%;
     max-width: 1300px;
 
@@ -381,5 +421,25 @@ footer {
 
     .footer__cover .header__info__phones a:first-child {
         margin-right: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer__cover .header__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+    }
+
+    .footer__cover .header__info div {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .footer__cover .header__info div:last-child {
+        margin-bottom: 0;
     }
 }
