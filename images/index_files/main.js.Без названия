@@ -1,0 +1,44 @@
+var inputBody = document.getElementById('input-body'),
+    funcName,
+    text,
+    isRequired;
+
+function callInput(infoArray) {
+    document.body.style.display = 'flex';
+
+    funcName = infoArray[1].toString();
+    let pattern = '';
+
+    if (infoArray[2]) isRequired = infoArray[2];
+    if (infoArray[3]) pattern = infoArray[3];
+
+    let htmlStr =(
+        "<div class='input__title'>" + infoArray[0] + "</div>" +
+        "<input class='input__field' pattern='" + pattern + "'>"
+    );
+
+    inputBody.insertAdjacentHTML(`afterBegin`, htmlStr);
+}
+
+document.onkeydown = function(e){
+	if (e.keyCode == 13) {
+        e.preventDefault();
+		executeFunc();
+    }
+};
+
+function executeFunc() {
+    text = document.getElementsByTagName('input')[0].value;
+
+    if (!isRequired) {
+        mp.trigger.apply(null, funcName, text);
+        document.body.style.display = 'none';
+    } else if (text) {
+        mp.trigger.apply(null, funcName, text);
+        document.body.style.display = 'none';
+    }
+}
+
+function closeInput() {
+    mp.trigger("closeInput");
+}
